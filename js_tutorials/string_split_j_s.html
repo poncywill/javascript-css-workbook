@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="t1" placeholder="enter sentence">
+    <button onclick="Countw()">count of words</button>
+    <input type="text" id="t2">
+    <script>
+
+        function Countw(){
+            let str;
+            str=document.getElementById("t1").value
+            
+            document.getElementById("t2").value=str.split(" ").length;
+        }
+
+    </script>
+</body>
+</html>

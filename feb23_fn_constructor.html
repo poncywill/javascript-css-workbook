@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body> 
+   <label for="">AccountNO</label>
+<input type="text" id="accno" placeholder="enter account number" class="form-control">
+<label for="">name</label>
+<input type="text" id="name" placeholder="enter account holder name" class="form-control">
+<label for="">mobile</label>
+<input type="text" id="mobile" placeholder="enter mob no" class="form-control">
+<label for="">balance</label>
+<input type="text" id="balance" placeholder="enter initial balance" class="form-control">
+<br>
+
+<label for="">account type</label>
+<select name="" id="type">
+    <option value="savings">savings</option>
+    <option value="current">current</option>
+
+</select>
+<button class="btn btn-success" onclick="createAccount()">add</button>
+
+
+<input type="text" id="modify" placeholder="enter amount to deposit or withdraw" class="form-control">
+
+<select name="" id="" onchange="modifyAcc()">
+    <option value="deposit" id="dpt">deposit</option>
+    <option value="withdraw" id="wdr">withdraw</option>
+
+</select>
+
+
+<!-- <input type="text" placeholder="enter account number to deposit or withdraw amount" id="dwacc_no"> -->
+
+<button onclick="modifyAcc()">click to modify account</button>
+
+
+
+
+
+    <script>
+        let accountholderslist=[]
+        function createAccount(){
+            let accno=document.getElementById("accno").value
+            let name=document.getElementById("name").value
+            let mobile=document.getElementById("mobile").value
+            let balance=document.getElementById("balance").value
+            let type=document.getElementById("type").value
+
+            let obj=new Account(accno,name,mobile,balance,type)
+            console.log(obj);
+            accountholderslist.push(obj)
+            console.log(accountholderslist)
+        }
+
+
+        function Account(accno,name,mobile,balance,type){
+          
+          this.accno=accno
+          this.name=name
+          this.balance=parseFloat(balance)
+          this.mobile=mobile
+          this.type=type
+         
+
+       }
+
+       function modifyAcc(){
+        //    let accountno=document.getElementById("dwacc_no").value
+
+
+       function isValid(accno){
+            return accountholderslist.some(x=>{
+                if ((accno)==x.accno){
+                    return false
+
+                }
+
+            })
+        }
+
+        if(document.getElementById("dpt").value="deposit"){
+
+
+        function deposit(accno,amount){
+            if(isValid(accno)){
+                accountholderslist.forEach(x=>{
+                    if (x.accno==accno){
+                    x.balance+=amount
+                }
+                else{
+                    alert("invalid account number...")
+                }
+            })
+           
+
+            }
+
+        }
+        }
+
+
+        if(document.getElementById("wdr").value="withdraw"){
+
+        function withdraw(accno,amount){
+            if(isValid(accno)){
+                accountholderslist.forEach(x=>{
+                    if (x.accno==accno){
+                        if (amount<x.balance){
+    
+                       
+                    x.balance-=amount
+                        }
+                }
+                else{
+                    alert("invalid account number...")
+                }
+            })
+           
+
+            }
+
+
+        }
+        }
+
+       }
+
+       
+
+
+
+    </script>
+</body>
+</html>

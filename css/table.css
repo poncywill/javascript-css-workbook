@@ -1,0 +1,20 @@
+table{
+    border-collapse: collapse;
+    width:100%;
+    text-align: center;
+    border-color: violet;
+    
+}
+.heading{
+    background-color: gray;
+}
+.heading:hover{
+    background-color: lightblue;
+
+}
+.rows:nth-child(even){
+    background-color: green;
+}
+.rows:hover{
+    background-color: indigo;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://en.wikipedia.org/wiki/Main_Page" method="post" onsubmit="return validate()"> 
+    <input type="text" class="form-control" id="name" placeholder="enter your name">
+    <input type="text" class="form-control" id="age" placeholder="enter your age">
+    <input type="text" class="form-control" id="mobile" placeholder="enter your mob">
+    <input type="text" class="form-control" id="email" placeholder="enter your email"> 
+    <input type="password" class="form-control" id="password" placeholder="enter your password">
+    <button class="btn btn-success">signup</button>
+</form>
+
+
+
+<script>
+    function validate(){
+        let name=document.getElementById("name")
+        
+        let age=document.getElementById("age")
+        let mobile=document.getElementById("mobile")
+        let email=document.getElementById("email")
+        let password=document.getElementById("password")
+
+
+
+        if(name.value==""){
+            alert("name cant be empty")
+            name.focus()
+            return false
+        }
+
+       
+
+        if(age.value==""){
+            alert("age cant be empty")
+            age.focus()
+            return false
+
+        }
+        if(age.value<18 || age.value>30){
+            alert(" age not between 18 and 30")
+        }
+      
+
+
+        
+        if(mobile.value==""){
+            alert("mobile cant be empty")
+            mobile.focus()
+            return false
+
+        }
+
+        if(mobile.length!=10 || isNaN(mobile)){
+            console.log("invalid mobile no");
+            
+        }
+
+        if(email.value==""){
+            alert("email cant be empty")
+            email.focus()
+            return false
+        }
+
+        let regex=/^[a-z A-Z]+[\w\W]* @ (gmail.com|yahoo.in)$/g
+         
+          
+       
+          if(regex.test(email))
+           {
+             alert("valid mail id")
+           }
+           else{
+               alert("invalid mail id")
+           }
+         
+
+       
+
+        
+
+        
+
+         if(password.value==""){
+            alert("password cant be empty")
+            password.focus()
+            return false
+
+
+         }
+
+         if(password.length<3 || password.length>10){
+             alert("invalid password")
+         }
+   
+
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="color" onchange="setColor()">
+    <option value="red">red</option>
+    <option value="">blue</option>
+    <option value="">yellow</option>
+    <option value="">green</option>
+</select>
+
+<div id="chosencolors">
+
+</div>
+
+<ul id="mycolors">
+
+</ul>
+</body>
+
+<script>
+     let colors=[]
+    function setColor(){
+        let color=document.getElementById("color").value 
+        if(colors.includes(color)){
+            alert("color already exists")
+        }
+        else{
+            colors.push(color);
+            console.log(colors);
+            document.getElementById("chosencolors").innerText=colors;
+            // displayColors()
+
+        }
+         
+    }
+
+    // function displayColors(){
+    //     let str=""
+    //     for(let color of colors){
+    //         str+=`<li> ${color}</li>`
+
+    //     }
+    //     document.getElementById("mycolors").innerHTML=str
+    // }
+
+</script>
+</html>

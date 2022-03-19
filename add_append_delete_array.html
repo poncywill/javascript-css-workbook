@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num" placeholder="enter the number">
+    
+    <input type="text" id="names" placeholder="enter name">
+  
+   
+    <button onclick="check1()">click me</button>
+    <div id="mydiv"></div>
+   
+   
+    
+    <script>
+        let list=["jeena","paul","jerin","jibin","diya"] 
+        console.log(list)
+
+        let obj=document.createElement("p")
+          obj.innerText=list.toString()
+    
+          document.getElementById("mydiv").appendChild(obj)  
+
+
+
+
+
+
+
+
+
+        function check1(){
+            let a=document.getElementById("num").value 
+            let the_name=document.getElementById("names").value
+            k=list.indexOf(the_name)
+
+            if(a==1){
+                
+                list.push(the_name)
+                console.log(list)
+                let obj=document.createElement("p")
+                obj.innerText=list.toString()
+    
+                document.getElementById("mydiv").appendChild(obj)  
+
+               
+
+            }
+            else if(a==2){
+               
+                console.log(list.splice(k,1))
+                console.log(list)
+                let obj=document.createElement("p")
+          obj.innerText=list.toString()
+    
+          document.getElementById("mydiv").appendChild(obj) 
+            }
+
+            else if(a==3){
+                let p=prompt("enter name")
+             
+                console.log(list.splice(k,1,p))
+                console.log(list)
+                let obj=document.createElement("p")
+          obj.innerText=list.toString()
+    
+          document.getElementById("mydiv").appendChild(obj) 
+              
+
+
+            }
+
+            }
+
+          
+
+
+
+    </script>
+</body>
+</html>

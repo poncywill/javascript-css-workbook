@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-5.1.3-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <input type="text" class="form-control" placeholder="enter product id" id="pid">
+    <input type="text" class="form-control" placeholder="enter product name" id="pname">
+    <input type="text"class="form-control" placeholder="enter product price" id="pprice">
+    <button class="btn btn-danger" onclick="addDtails()">add</button>
+    <!-- <button class="btn btn-success" onclick="viewDetails()">view details</button> -->
+  <div id="indiv"></div>
+  <p id="p2"></p>
+
+    <script>
+        productlist=[]
+        function addDtails(){
+            let a=document.getElementById("pid").value 
+            let b=document.getElementById("pname").value 
+            let c=document.getElementById("pprice").value 
+            let product={id:a,name:b,price:c}
+            console.log(product);
+            document.getElementById("pid").value =" "
+            document.getElementById("pname").value=" "
+            document.getElementById("pprice").value =" "
+
+
+            productlist.push(product)
+            console.log(productlist)
+
+            const indiv = document.getElementById("indiv")
+
+                let obj=document.createElement("p")
+                obj.innerText= `${product.id} ${product.name} ${product.price}`
+                indiv.appendChild(obj)  
+                
+
+            // document.getElementById("indiv").innerHTML= Object.values(product_arr)
+
+            // document.getElementById("indiv").innerHTML = JSON.stringify(productlist);
+        }
+
+        
+
+      
+
+    </script>
+</body>
+</html>

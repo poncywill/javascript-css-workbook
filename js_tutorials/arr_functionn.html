@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="op1" onchange="funct()">
+       <option>red</option>
+       <option>blue</option>
+       <option>yellow</option>
+       <option>green</option>
+    </select>
+
+    <div id="chosencolors"></div>
+    <ul id="mycolors">
+
+    </ul>
+
+    <script>
+        let b=[]        
+        function funct(){
+            
+            
+            let a=document.getElementById("op1").value
+            if(b.includes(a)){
+                alert("colour already there")
+            }
+            else{
+                b.push(a)
+                console.log(b)
+                document.getElementById("chosencolors").innerText=b
+                displayColors()
+
+            }
+           
+            
+
+
+        
+        }
+        function displayColors(){
+            let str=""
+            for(let a of b){
+                str+=`<li> ${a}</li>`
+                document.getElementById("mycolors").innerHTML=str
+            }
+        }
+            
+           
+
+        
+    </script>
+</body>
+</html>

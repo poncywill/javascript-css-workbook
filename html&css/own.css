@@ -1,0 +1,19 @@
+table{
+    border-collapse: collapse;
+}
+
+
+
+.head{
+    background-color: grey;
+}
+.head:hover{
+    background: magenta;
+
+}
+.row{
+    background-color: lightblue;
+}
+.row:hover{
+    background-color: peru;
+}

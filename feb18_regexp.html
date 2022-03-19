@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="userdata">
+    <button onclick="checkData()">check</button>
+
+    <script>
+       let regex=/^[a-z A-Z]+[\w\W]* @ (gmail.com|yahoo.in)$/g
+       function checkData(){
+          let myinput=document.getElementById("userdata").value
+         alert(myinput.match(regex))
+         if(regex.test(myinput))
+         {
+             alert("valid mail id")
+         }
+         
+
+       }
+    </script>
+</body>
+</html>

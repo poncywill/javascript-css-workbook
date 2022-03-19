@@ -1,0 +1,22 @@
+h1{
+    color: darkviolet;
+    text-align: center;
+    font-size: 50px;
+    font-family:monospace;
+    text-decoration: underline  rgb(197, 51, 14);
+}
+a{
+    color: rgb(139, 6, 6);
+    background-color: pink;
+}
+/* to style using class */
+
+.demo{
+    text-decoration: overline;
+    font-weight: bolder;
+    text-align: center;
+    color: olivedrab;
+}
+#heading3{
+    color: yellow;
+}

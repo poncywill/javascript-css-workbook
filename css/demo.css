@@ -1,0 +1,10 @@
+.my-link{
+    background-color: blue;
+    color: cornsilk;
+    font-size: 15px;
+    
+}
+
+.my-link:hover{
+    background-color: yellow;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="t1" placeholder="enter the sentence"> 
+    <button onclick="rev1()">click to reverse</button>
+    <input type="text" id="t2">
+    <p id="p11"></p>
+    <script>
+        let v=[]
+        function rev1() {
+            
+           
+            let s=document.getElementById("t1").value
+            s.split(" ")
+            // console.log(s);
+            let words=s.split(" ")
+            // console.log(words);
+            
+            // let k=console.log(words.reverse());
+
+            let k=console.log(s.split(" ").reverse())
+            let str=""
+
+            for(let i=0;i<=k.length;k++){
+                str+=k[i]
+
+            }
+            
+            
+             document.getElementById("p11").innerHTML=str;
+
+
+
+           
+           
+
+            // document.getElementById("t2").value = k.join("  ");
+
+            
+
+            // for(let i=wors.length;i<words.length ;i--){
+            // let v=words[i]
+            // console.log(v)
+    
+           
+            
+   
+
+            // }
+
+           
+        }
+
+    </script>
+</body>
+</html>

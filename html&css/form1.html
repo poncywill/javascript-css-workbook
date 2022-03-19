@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="prac.html" method="post">
+        <div>
+            <label for="fname">Firstname</label>
+        </div>
+        <div>
+            <input type="text" placeholder="enter firstname" required minlength="3" maxlength="5"> 
+        </div>
+        <div>
+            <label for="lname">lastname</label>
+        </div>
+        <div>
+            <input type="text" placeholder="enter last name " required>
+        </div>
+        <div>
+            <label for="">Age</label>
+        </div>
+        <div>
+            <input type="number" name="dob" min="18" max="55" required>
+        </div>
+        <div>
+            <label for="gender">Gender</label>
+        </div>
+        <div>
+            Male  <input type="radio" value="m" name="gender">
+        </div>
+        <div>
+            Female  <input type="radio" value="f" name="gender">
+        </div>
+        
+        <label for="state">Choose your state from the list:</label>
+<input list="states" name="state" id="state">
+
+<datalist id="states">
+  <option value="kerala">
+  <option value="ktka">
+  <option value="tn">
+  
+</datalist>
+        <input type="submit">
+
+       
+        
+
+
+        <div>
+            <label for="">DOB</label>
+        </div>
+        <div>
+            <input type="date" name="dob" min="1990-02=01" max="2030-02-31" >
+
+            <input type="submit" value="Register">
+        </div>
+
+
+
+
+
+
+    </form>
+
+
+
+</body>
+</html>
